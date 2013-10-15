@@ -10,10 +10,8 @@ import android.view.ViewGroup;
 public class LoginFrag extends Fragment {
 	
 	@Override
-	public View onCreateView(LayoutInflater inflater, 
-	        ViewGroup container, Bundle savedInstanceState) {
-	    View view = inflater.inflate(R.layout.login, 
-	            container, false);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	    View view = inflater.inflate(R.layout.login, container, false);
 	    return view;
 	}
 
