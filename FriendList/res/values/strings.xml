@@ -7,5 +7,8 @@
     <string name="get_started">To get started, log in using Facebook</string>
      <string name="app_id">242552245897482</string>
      <string name="logout">Logout</string>
+     
+<string name="error_dialog_title">Error</string>
+<string name="error_dialog_button_text">OK</string>
 
 </resources>

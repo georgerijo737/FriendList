@@ -85,41 +85,29 @@ public class MainActivity extends FragmentActivity {
 	    Session session = Session.getActiveSession();
 
 	    if (session != null && session.isOpened()) {
-	        // if the session is already open,
-	        // try to show the selection fragment
 	        showFragment(LISTFRIENDS, false);
 	    } else {
-	        // otherwise present the splash screen
-	        // and ask the person to login.
 	        showFragment(LOGIN, false);
 	    }
 	}
 	
 	private void onSessionStateChange(Session session, SessionState state, Exception exception) {
-	    // Only make changes if the activity is visible
 	    if (isResumed) {
 	        FragmentManager manager = getSupportFragmentManager();
-	        // Get the number of entries in the back stack
 	        int backStackSize = manager.getBackStackEntryCount();
-	        // Clear the back stack
 	        for (int i = 0; i < backStackSize; i++) {
 	            manager.popBackStack();
 	        }
 	        if (state.isOpened()) {
-	            // If the session state is open:
-	            // Show the authenticated fragment
 	            showFragment(LISTFRIENDS, false);
 	        } else if (state.isClosed()) {
-	            // If the session state is closed:
-	            // Show the login fragment
 	            showFragment(LOGIN, false);
 	        }
 	    }
 	}
 	
 	
-	private Session.StatusCallback callback = 
-	    new Session.StatusCallback() {
+	private Session.StatusCallback callback = new Session.StatusCallback() {
 	    @Override
 	    public void call(Session session, 
 	            SessionState state, Exception exception) {
@@ -147,7 +135,6 @@ public class MainActivity extends FragmentActivity {
 	
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
-	    // only add the menu when the selection fragment is showing
 	    if (fragments[LISTFRIENDS].isVisible()) {
 	        if (menu.size() == 0) {
 	        	logout = menu.add(R.string.logout);
