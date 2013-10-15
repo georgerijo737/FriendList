@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FriendList</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="get_started">To get started, log in using Facebook</string>
+     <string name="app_id">242552245897482</string>
+     <string name="logout">Logout</string>
+
+</resources>
